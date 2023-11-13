@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+        <div class="container">
+           <center><h2>Login</h2></center> 
+            <form>
+                <input type="text" placeholder="   Username" class="username" required> <br>
+                <input type="password" placeholder="   Password" class="password" required><br>
+                
+                <button class="login-btn">Login</button>
+            </form>
+        </div>
+    </body>
+    <style>
+      body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url(sunset.jpg);
+        background-position: center;
+        background-size: cover;
+          
+      }
+      form{
+          background: transparent;
+          border: 2px solid rgba(255,255 ,255, 0.6);
+          backdrop-filter: blur(5px);
+
+          
+        display:inline-block;
+        /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    text-align: center;
+    font-size: 16px;
+    /* margin: 100px; */
+    border-radius: 30px;
+    box-shadow: 0 8px 16px 0 rgba(255, 138, 88, 0.6), 0 6px 20px 0 rgba(255,255 ,255, 0.6);
+       
+      }
+      .username , .password {
+        border-radius: 30px;
+        border-color: rgba(255,255 ,255, 0.6);
+        height: 50px;
+        width: 250px;
+        padding: 10px;
+        margin: 10px;
+        background: transparent;
+        border: 1;
+        color: whitesmoke;
+        
+
+      }
+      
+        .login-btn {
+  background-color: whitesmoke;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 40px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.login-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.login-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.2), 0 4px 15px 0 rgba(0,0,0,0.19);
+}
+
+.login-btn:focus {
+  outline: none;
+}
+    </style>
+    <script>
+        const btn = document.querySelector('.login-btn');
+
+btn.addEventListener('click', () => {
+  btn.classList.add('animate');
+});
+
+btn.addEventListener('animationend', () => {
+  btn.classList.remove('animate');
+});
+    </script>
+    </html>    
